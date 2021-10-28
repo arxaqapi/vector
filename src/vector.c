@@ -64,3 +64,25 @@ void v_destroy(vector_t * v)
     free(v->data);
     free(v);
 }
+
+// Accesssors
+int32_t v_size(vector_t *v)
+{
+    return v->size;
+}
+int32_t v_capacity(vector_t *v)
+{
+    return v->capacity;
+}
+
+int32_t v_get(vector_t *v, uint32_t i)
+{
+    if (i >= v->capacity)
+        return -1;
+    return v->data[i];
+}
+
+int8_t v_is_empty(vector_t *v)
+{
+    return v->size == 0;
+}
