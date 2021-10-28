@@ -23,4 +23,6 @@ int32_t v_capacity(vector_t *v);
 
 int32_t v_get(vector_t *v, uint32_t i);
 
+void v_set(vector_t *v, uint32_t i, int32_t e);
+
 int8_t v_is_empty(vector_t *v);

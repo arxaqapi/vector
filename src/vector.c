@@ -85,6 +85,16 @@ int32_t v_get(vector_t *v, uint32_t i)
     return v->data[i];
 }
 
+void v_set(vector_t *v, uint32_t i, int32_t e)
+{
+    if (i >= v->capacity)
+    {
+        fprintf(stderr, "Illegal access outside of the vector's capacity is not allowed.\n");
+        exit(EXIT_FAILURE);
+    }
+    v->data[i] = e;
+}
+
 int8_t v_is_empty(vector_t *v)
 {
     return v->size == 0;
