@@ -4,6 +4,18 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * @brief Full definition of struct vector
+ * 
+ */
+struct vector_s
+{
+    int32_t *data;
+    uint32_t capacity;
+    uint32_t size;
+};
+
+
 vector_t * v_init(uint32_t capacity)
 {
     vector_t * nv = calloc(1, sizeof(vector_t));

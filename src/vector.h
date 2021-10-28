@@ -11,6 +11,8 @@ typedef struct vector_s
     uint32_t size;
 } vector_t;
 
+// opaque definition of vector_t struct
+typedef struct vector_s vector_t;
 
 vector_t * v_init(uint32_t size);
 
