@@ -78,7 +78,10 @@ int32_t v_capacity(vector_t *v)
 int32_t v_get(vector_t *v, uint32_t i)
 {
     if (i >= v->capacity)
-        return -1;
+    {
+        fprintf(stderr, "Illegal access outside of the vector's capacity is not allowed.\n");
+        exit(EXIT_FAILURE);
+    }
     return v->data[i];
 }
 
