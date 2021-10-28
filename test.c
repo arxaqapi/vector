@@ -4,8 +4,8 @@
 
 int main(void)
 {
-    printf("-- test start --\n\n");
-    
+    printf("-- Test start --\n\n");
+    //// Test init and push_back
     vector_t *v = v_init(10);
     v_push_back(v, 10);
     v_push_back(v, 11);
@@ -17,14 +17,18 @@ int main(void)
     v_push_back(v, 17);
     v_push_back(v, 18);
     v_push_back(v, 19);
-    // The array is resized here
-    v_push_back(v, 20);
+    v_push_back(v, 20); // The array is resized here
+
+    //// Test set
+    v_set(v, 16, 88);
+    //// Test get and loop
     for (size_t i = 0; i < v_capacity(v); i++)
     {
         printf("v: %d ", v_get(v, i));
     }
+    //// Test destroy
     v_destroy(v);
     
-    printf("\n\n-- test end   --\n");
+    printf("\n\n-- Test end   --\n");
     return 0;
 }
