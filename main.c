@@ -19,9 +19,9 @@ int main(void)
     v_push_back(v, 19);
     // The array is resized here
     v_push_back(v, 20);
-    for (size_t i = 0; i < v->capacity; i++)
+    for (size_t i = 0; i < v_capacity(v); i++)
     {
-        printf("v: %d ", v->data[i]);
+        printf("v: %d ", v_get(v, i));
     }
     v_destroy(v);
     
